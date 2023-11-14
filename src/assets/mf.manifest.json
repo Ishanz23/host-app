@@ -1,4 +1,5 @@
 {
   "remoteAppOne": "http://localhost:4300/remoteEntry.js",
-  "remoteAppTwo": "http://localhost:4400/remoteEntry.js"
+  "remoteAppTwo": "http://localhost:4400/remoteEntry.js",
+  "sharedComponents": "http://localhost:4500/remoteEntry.js"
 }
