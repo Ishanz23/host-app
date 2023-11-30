@@ -1,4 +1,7 @@
 <p class="mb-2 text-2xl text-center">Shell App Home Component</p>
+<div class="text-xl text-center text-slate-800">
+  Hi {{ (user?.getUser())() }}
+</div>
 <p class="flex items-center justify-center text-center">
   <span class="font-bold text-slate-800">Count :</span>
   <span class="px-2 text-xl font-semibold text-fuchsia-600">
@@ -11,4 +14,20 @@
     [buttonName]="'Increment'"
     (customEvent)="onCustomEvent($event)"
   ></shared-dynamic>
+</div>
+<div class="flex items-center justify-center p-4" *ngIf="user">
+  <button
+    *ngIf="user.getUser()() === 'default'"
+    class="px-4 py-2 bg-teal-600 rounded-md text-slate-100"
+    (click)="login()"
+  >
+    LOGIN
+  </button>
+  <button
+    *ngIf="user.getUser()() !== 'default'"
+    class="px-4 py-2 bg-teal-600 rounded-md text-slate-100"
+    (click)="logout()"
+  >
+    LOGOUT
+  </button>
 </div>

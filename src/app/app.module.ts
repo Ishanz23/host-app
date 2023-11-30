@@ -19,6 +19,13 @@ function initialize() {
     });
   };
 }
+async function getUserService() {
+  return await loadRemoteModule({
+    type: 'module',
+    remoteEntry: 'http://localhost:4500/remoteEntry.js',
+    exposedModule: './user-service',
+  });
+}
 @NgModule({
   declarations: [AppComponent, HomeComponent],
   imports: [BrowserModule, AppRoutingModule],
