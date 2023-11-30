@@ -1,6 +1,14 @@
-<p>Host App Home Page</p>
-<shared-dynamic
-  [propOne]="'This is a Web Component Loaded in Host'"
-  [propTwo]="'Hi from Shared'"
-  (customEvent)="onCustomEvent($event)"
-></shared-dynamic>
+<p class="mb-2 text-2xl text-center">Shell App Home Component</p>
+<p class="flex items-center justify-center text-center">
+  <span class="font-bold text-slate-800">Count :</span>
+  <span class="px-2 text-xl font-semibold text-fuchsia-600">
+    {{ this.counter() }}
+  </span>
+</p>
+<div class="flex items-center justify-center shared">
+  <shared-dynamic
+    [propOne]="'This is a Web Component that is loaded in Shell App'"
+    [buttonName]="'Increment'"
+    (customEvent)="onCustomEvent($event)"
+  ></shared-dynamic>
+</div>
